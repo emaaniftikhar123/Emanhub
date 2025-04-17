@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 1. Integer (int) min and max values
+        // int is a 32-bit signed integer
+        int minInt = int.MinValue;    // Minimum value for int (-2,147,483,648)
+        int maxInt = int.MaxValue;    // Maximum value for int (2,147,483,647)
+        Console.WriteLine($"int range: {minInt} to {maxInt}");
+
+        // 2. Long (long) min and max values
+        // long is a 64-bit signed integer
+        long minLong = long.MinValue; // Minimum value for long (-9,223,372,036,854,775,808)
+        long maxLong = long.MaxValue; // Maximum value for long (9,223,372,036,854,775,807)
+        Console.WriteLine($"long range: {minLong} to {maxLong}");
+
+        // 3. Double (double) min and max values
+        // double is a 64-bit floating-point number
+        double minDouble = double.MinValue; // Minimum value for double (~-1.7976931348623157E+308)
+        double maxDouble = double.MaxValue; // Maximum value for double (~1.7976931348623157E+308)
+        Console.WriteLine($"double range: {minDouble} to {maxDouble}");
+
+        // Note: For double, there's also positive/negative infinity and NaN (Not a Number)
+        double positiveInfinity = double.PositiveInfinity;
+        double negativeInfinity = double.NegativeInfinity;
+        double notANumber = double.NaN;
+
+        // 4. String doesn't have min/max in the same sense as numeric types
+        // For strings, we can consider min/max based on length or Unicode values
+        // Empty string is the "minimum" in terms of length
+        string minString = ""; // Smallest possible string (length 0)
+        
+        // For "max" string, it's more complicated due to memory constraints
+        // The maximum length of a string is theoretically 2^31 characters, but practically limited by memory
+        Console.WriteLine($"String minimum length example: \"{minString}\" (length {minString.Length})");
+
+        // For character values within strings
+        char minChar = char.MinValue; // Minimum Unicode character value ('\0')
+        char maxChar = char.MaxValue; // Maximum Unicode character value ('\uffff')
+        Console.WriteLine($"char range: '\\u{(int)minChar:x4}' to '\\u{(int)maxChar:x4}'");
+    }
+}
